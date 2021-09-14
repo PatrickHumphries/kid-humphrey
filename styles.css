@@ -1,0 +1,87 @@
+:root {
+  --primary-color: rgba(37, 37, 37, 0.3);
+  --menu-speed: 0.6s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+}
+
+html body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+html body .container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+html body .showcase {
+  color: white;
+  background-color: var(--primary-color);
+  height: 100vh;
+  position: relative;
+}
+
+html body .showcase:before {
+  content: "";
+  background: url("imgs/showcase-background.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+html body .showcase .showcase-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+html body .showcase h1 {
+  font-size: 2rem;
+}
+
+html body .showcase p {
+  font-size: 1rem;
+}
+
+html body .btn {
+  display: inline-block;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+html body .btn:hover {
+  opacity: 0.7;
+}
+/*# sourceMappingURL=styles.css.map */
