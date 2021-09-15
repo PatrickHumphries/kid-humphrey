@@ -1,7 +1,15 @@
 :root {
   --primary-color: rgba(37, 37, 37, 0.4);
   --menu-speed: 0.6s;
-  --background-img: url("imgs/showcase-background.jpg") no-repeat center
+  --background-img1: url("imgs/showcase-background.jpg") no-repeat center
+  center/cover;
+  --background-img2: url("imgs/live-background.jpg") no-repeat center
+  center/cover;
+  --background-img3: url("imgs/music-background.jpg") no-repeat center
+  center/cover;
+  --background-img4: url("imgs/merch-background.jpg") no-repeat center
+  center/cover;
+  --background-img5: url("imgs/business-background.jpg") no-repeat center
   center/cover;
 }
 
@@ -33,7 +41,7 @@ html {
 
     .showcase:before {
       content: "";
-      background: var(--background-img);
+      background: var(--background-img1);
       position: absolute;
       top: 0;
       left: 0;
@@ -75,6 +83,8 @@ html {
       opacity: 0.7;
     }
 
+    // LIVE SHOW LIST
+
     .showlist-container {
       display: flex;
       flex-direction: column;
@@ -84,7 +94,7 @@ html {
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: var(--background-img);
+      background: var(--background-img2);
     }
 
     .showlist-container .showlist-inner {
@@ -111,6 +121,30 @@ html {
 
     .showlist-container .showlist-inner table tr td {
         text-align: center;
+    }
+
+    // MUSIC PLAYER
+
+    .music-page-container {
+        background: var(--background-img3);
+        height: 100vh;
+        width: 100vw;
+    }
+
+    // MERCH
+
+    .merch-container {
+        background: var(--background-img4);
+        height: 100vh;
+        width: 100vw;
+    }
+
+    //BUSINESS
+
+    .business-container {
+        background: var(--background-img5);
+        height: 100vh;
+        width: 100vw;
     }
   }
 }
