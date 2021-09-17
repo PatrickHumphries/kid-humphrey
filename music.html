@@ -16,33 +16,56 @@
     <title>Kid Humphries Music</title>
   </head>
   <body>
-    <div class="menu-wrap">
-      <input type="checkbox" class="toggler" />
-      <div class="hamburger"><div></div></div>
-      <div class="menu">
-        <div>
-          <div>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="live.html">Live</a></li>
-              <li><a href="music.html">Music</a></li>
-              <li><a href="merch.html">Merch</a></li>
-              <li><a href="business.html">Business</a></li>
-            </ul>
+    <div id="music-body">
+      <div class="background-filter">
+        <div class="menu-wrap">
+          <input type="checkbox" class="toggler" />
+          <div class="hamburger"><div></div></div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="live.html">Live</a></li>
+                  <li><a href="music.html">Music</a></li>
+                  <li><a href="merch.html">Merch</a></li>
+                  <li><a href="business.html">Business</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="music-page-container">
-      <div class="music-container">
-        <div class="music-info">
-          <h4 id="title">Tracks</h4>
-          <div class="progress-container">
-            <div class="progress"></div>
+        <h1>Music Player</h1>
+
+        <div class="music-container play">
+          <div class="music-info">
+            <h4 id="title">Early Bird</h4>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </div>
+
+          <audio src="audio/early-bird.mp3" id="audio"></audio>
+          <div class="img-container">
+            <img
+              src="imgs/north-east-early-bird.png"
+              alt="music-cover"
+              id="cover"
+            />
+          </div>
+
+          <div class="navigation">
+            <button id="prev" class="action-btn">
+              <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+              <i class="fas fa-forward"></i>
+            </button>
           </div>
         </div>
-        <!-- left off on audio tag -->
-        <audio src="music/"></audio>
       </div>
     </div>
     <script src="script.js"></script>
