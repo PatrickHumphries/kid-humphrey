@@ -171,6 +171,11 @@ html body #music-body {
           justify-content: center;
 }
 
+html body #music-body h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+
 html body .background-filter {
   height: 100vh;
   width: 100vw;
@@ -333,7 +338,7 @@ html body .progress-container {
 }
 
 html body .progress {
-  background-color: #fed8aa;
+  background-color: #f87a32;
   border-radius: 5px;
   height: 100%;
   width: 0%;
