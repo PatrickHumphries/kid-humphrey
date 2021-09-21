@@ -265,8 +265,8 @@ html body .img-container::after {
   left: 50%;
   bottom: 50%;
   border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -65%);
+          transform: translate(-50%, -65%);
 }
 
 html body .navigation {

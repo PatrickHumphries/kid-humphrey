@@ -6,14 +6,24 @@ const nextBtn = document.getElementById("next");
 
 const audio = document.getElementById("audio");
 const progress = document.querySelector(".progress");
-const progressContainer = document.getElementById("progress-container");
+const progressContainer = document.querySelector(".progress-container");
 const title = document.getElementById("title");
 const cover = document.getElementById("cover");
 const currTime = document.querySelector("#currTime");
 const durTime = document.querySelector("#durTime");
+const volume = document.getElementById("volume");
 
 // Song titles
-const songs = ["sing1", "song2", "early-bird"];
+const songs = [
+  "Penny-Lane-Mixed",
+  "Avenida-Mixed",
+  "In-Mind-Mixed",
+  "Supafly-Mixed",
+  "Since-98",
+  "Inner-Changes",
+  "Inner-Faith",
+  "Perfect-Destination",
+];
 
 // Keep track of song
 let songIndex = 2;
@@ -25,7 +35,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
   title.innerText = song;
   audio.src = `audio/${song}.mp3`;
-  cover.src = `imgs/${song}.png`;
+  cover.src = `imgs/joat-cover.jpg`;
 }
 
 // Play song
@@ -66,8 +76,15 @@ function nextSong() {
 
 function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
-  const progressPercent = (currentTime/duration) * 100;
+  const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
+}
+
+function setProgress(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+  audio.currentTime = (clickX / width) * duration;
 }
 
 playBtn.addEventListener("click", () => {
@@ -80,8 +97,15 @@ playBtn.addEventListener("click", () => {
   }
 });
 
+volume.addEventListener("change", function (e) {
+  audio.volume = e.currentTarget.value / 100;
+});
+
 //change song events
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("timeupdate", updateProgress);
+progressContainer.addEventListener("click", setProgress);
+
+audio.addEventListener("ended", nextSong);
